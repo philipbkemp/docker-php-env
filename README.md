@@ -10,3 +10,10 @@ I'm going to assume you already have docker-compose installed
 1. Run docker-compose up
 1. Open a browser and go to [localhost:8001](http://localhost:8001)
 1. Edit the code inside the /code folder
+
+# Included modules/features
+ ## mySQL 8.0
+ ## PHP 7.4
+ Includes mysqli
+ ## Apache
+ Includes mod_rewrite
