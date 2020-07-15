@@ -17,7 +17,8 @@ services:
     build:
       context: ./
     volumes:
-      - C:\....code:/var/www/html/
+      - ./code:/var/www/html/
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     ports:
       - 8001:80
     depends_on:
