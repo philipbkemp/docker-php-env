@@ -2,7 +2,7 @@ version: '2'
 services:
   mysql:
     image: mysql:8.0
-    container_name: mysql-server-80
+    container_name: mysql-8-0
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - .:/application
@@ -12,12 +12,12 @@ services:
     ports:
       - 8002:3306
   website:
-    container_name: php74
+    container_name: php-7-4
     image: php_img:latest
     build:
       context: ./
     volumes:
-      - C:\path\to\php\code:/var/www/html/
+      - C:\....code:/var/www/html/
     ports:
       - 8001:80
     depends_on:
