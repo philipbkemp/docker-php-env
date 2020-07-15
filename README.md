@@ -15,5 +15,7 @@ I'm going to assume you already have docker-compose installed
  ## mySQL 8.0
  ## PHP 7.4
  Includes mysqli
+ 
+ Allows file uploads up to 10MB through a ``uploads.ini`` file
  ## Apache
  Includes mod_rewrite
