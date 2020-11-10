@@ -23,3 +23,12 @@ services:
       - 8001:80
     depends_on:
       - mysql
+  phpmyadmin:
+    depends_on:
+      - mysql
+    image: phpmyadmin/phpmyadmin
+    container_name: php-myadmin
+    ports:
+      - 8081:80
+    environment:
+      PMA_HOST: mysql
