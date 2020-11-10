@@ -19,3 +19,6 @@ I'm going to assume you already have docker-compose installed
  Allows file uploads up to 10MB through a ``uploads.ini`` file
  ## Apache
  Includes mod_rewrite
+
+ ## PHPMyAdmin
+ Accessible at PHPMyAdmin at [localhost:8081](http://localhost:8081) and login with `root` (no password)
