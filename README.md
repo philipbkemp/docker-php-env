@@ -29,7 +29,7 @@ If you want to login to PHPmyAdmin, just go to [localhost:8003](http://localhost
 ## MySQL
 Version 8.0
 
-Login with username `root` and no password. [Issue #4](https://github.com/philipbkemp/docker-php-env/issues/4) will look at how a password can be used if needed.
+Login with username `root` and no password.
 
 ## PHP
 Version 7.4
