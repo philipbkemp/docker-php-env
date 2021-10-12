@@ -1,8 +1,8 @@
 version: '2'
 services:
-  mysql:
+  dpe-mysql:
     image: mysql:8.0
-    container_name: mysql-8-0
+    container_name: dpe-mysql
     command: --default-authentication-plugin=mysql_native_password
     volumes:
       - .:/application
@@ -10,25 +10,25 @@ services:
     environment:
       - MYSQL_ALLOW_EMPTY_PASSWORD= yes
     ports:
-      - 8002:3306
-  website:
-    container_name: php-7-4
-    image: php_img:latest
+      - 18002:3306
+  dpe-website:
+    container_name: dpe-website
     build:
       context: ./
+      dockerfile: ./Dockerfile
     volumes:
       - ./code:/var/www/html/
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     ports:
-      - 8001:80
+      - 18001:80
     depends_on:
-      - mysql
-  phpmyadmin:
+      - dpe-mysql
+  dpe-phpmyadmin:
     depends_on:
-      - mysql
+      - dpe-mysql
     image: phpmyadmin/phpmyadmin
-    container_name: php-myadmin
+    container_name: dpe-phpmyadmin
     ports:
-      - 8003:80
+      - 18003:80
     environment:
-      PMA_HOST: mysql
+      PMA_HOST: dpe-mysql
